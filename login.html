@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Styling for desktop screens */
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .login-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            max-width: 500px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            line-height: 25px;
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Styling for mobile screens */
+        @media only screen and (max-width: 600px) {
+            .login-container {
+                padding: 30px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                padding: 10px 15px;
+                margin: 4px 0;
+            }
+
+            button {
+                padding: 10px 15px;
+                margin: 4px 0;
+            }
+        }
+
+        /* Colorful background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: linear-gradient(45deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0);
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Underline for Create an Account */
+        a.create-account {
+            text-decoration: underline;
+        }
+
+        .dacount a {
+            color: rgb(37, 150, 190);
+            text-decoration: none;
+        }
+
+        .dacount a:hover {
+            text-decoration: underline
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="background"></div>
+    <h2>Welcome back!</h2>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <label for="username">Username Or Email *</label>
+            <input type="text" id="username" name="username" placeholder="Enter email or username" required>
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="create-account">
+            <p class="dacount" style="font-size: 20px ; margin-top: 20px; ">Don't have an account? <a
+                    href="register.html" id="creat">Create one</a></p>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // Enforce password strength rules
+        var passwordInput = document.getElementById("password");
+        passwordInput.addEventListener("input", function () {
+            var password = passwordInput.value;
+            var containsLowercase = /[a-z]/.test(password);
+            var containsUppercase = /[A-Z]/.test(password);
+            var containsNumber = /\d/.test(password);
+            var containsSpecialCharacter = /[@$!%*?&]/.test(password);
+            var isValidPassword = containsLowercase && containsUppercase && containsNumber && containsSpecialCharacter;
+            passwordInput.setCustomValidity(isValidPassword ? "" : "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character (@$!%*?&)");
+            // 
+        });
+    </script>
+
+
+
+</body>
+
+</html>

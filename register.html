@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            line-height: 25px;
+            font-size: 18px;
+        }
+
+        .lb1 {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-family: 'Gulzar', serif;
+            font-family: 'Noto Serif Georgian', serif;
+            font-family: 'Roboto Slab', serif;
+            color: rgb(178, 178, 178);
+            /* add this line to increase distance */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 18px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            background-color: rgb(20, 89, 157);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+            width: 150px;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(8, 38, 67);
+        }
+
+        /* Media Queries */
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: both;
+                height: auto;
+                width: 100%;
+                padding: 10px;
+
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            input[type="submit"] {
+                margin-top: 20px;
+            }
+        }
+
+        .signin {
+            text-align: center;
+        }
+
+        .signin a {
+            color: rgb(37, 150, 190);
+            text-decoration: none;
+        }
+
+        .signin a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.8rem;
+        }
+
+        input.error {
+            border: 2px solid red;
+        }
+
+        #checkbox {
+            margin-left: 30px;
+
+        }
+
+        input[type='password']::-ms-reveal,
+        input[type='password']::-webkit-reveal {
+            display: none;
+        }
+
+        #show-password-btn {
+            margin-left: -70px;
+            position: absolute;
+            margin-top: 15px;
+            text-decoration: none;
+            border: none;
+            background-color: initial;
+            font-size: 18px;
+            color: rgb(18, 17, 16);
+            font-weight: bold;
+        }
+
+        .service {
+            color: rgb(178, 178, 178);
+            text-decoration: none;
+        }
+
+        #policy .service:hover {
+            color: black;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="thanks.html" method="POST">
+            <h1>Create Account</h1>
+
+            <!-- Email  -->
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required placeholder="Email Address">
+            <span class="error" id="email-error"></span>
+            <br><br>
+            <!-- First name  -->
+            <label for="firstname">Enter Name *</label>
+            <input type="text" id="firstname" name="firstname" required minlength="4" maxlength="15"
+                placeholder="First Name">
+            <span class="error" id="firstname-error"></span>
+            <br><br>
+            <!-- Last name  -->
+            <input type="text" id="lastname" name="lastname" required minlength="1" maxlength="15"
+                placeholder="Last Name">
+            <span class="error" id="lastname-error"></span>
+            <br><br>
+
+            <!-- User Name 		 -->
+            <label for="username">Create username*</label>
+            <span class="lb1"> Username is not case sensitive.</span>
+            <input type="text" id="username" name="username" required minlength="4" maxlength="15"
+                placeholder="Creat Username">
+            <span class="error" id="username-error"></span>
+            <br><br>
+            <!-- Password  -->
+            <label for="password">Password:</label>
+            <span class="lb1">Password must be at least 9 characters long, contain both uppercase and lowercase letters,
+                contain at least one number, and contain at least one special character.</span>
+
+            <input type="password" id="password" name="password" required placeholder="Creat Password">
+            <button type="button" id="show-password-btn">Show</button> <br>
+            <span class="error" id="password-error"></span>
+            <br><br>
+
+            <div style="display: flex; align-items: center;">
+                <!-- checkbox -->
+                <input type="checkbox" required id="checkbox">
+                <!-- policy -->
+                <span class="term lb1" style="margin-left: 10px ; font-size: 15px;" id="policy">By signing up, I agree
+                    that I am older
+                    than 13 years of age, agree to Terms of <a href="service.html" class="service">Service</a> and <a
+                        href="policy.html" class="service">Privacy Policy,</a> and Cookie Use.</span>
+            </div>
+            <input type="submit" name="submit" value="Creat Account">
+            <div class="signin" style="font-size: 20px ; margin-top: 20px; ">Already have an account? <a id="sign-in"
+                    href="login.html">Sign
+                    in</a>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script>
+        let firstnameInput = document.getElementById("firstname");
+        let lastnameInput = document.getElementById("lastname");
+        let emailInput = document.getElementById("email");
+        let usernameInput = document.getElementById("username");
+        let passwordInput = document.getElementById("password");
+
+        let firstnameError = document.getElementById("firstname-error");
+        let lastnameError = document.getElementById("lastname-error");
+        let emailError = document.getElementById("email-error");
+        let usernameError = document.getElementById("username-error");
+        let passwordError = document.getElementById("password-error");
+
+        function validateForm() {
+            let valid = true;
+
+            // First Name validation
+            let firstnameRegex = /^[a-zA-Z]+$/;
+            if (!firstnameRegex.test(firstnameInput.value)) {
+                firstnameInput.classList.add("error");
+                firstnameError.innerHTML = "Please enter a valid first name (only alphabets allowed)";
+                valid = false;
+            } else {
+                firstnameInput.classList.remove("error");
+                firstnameError.innerHTML = "";
+            }
+
+            // Last Name validation
+            let lastnameRegex = /^[a-zA-Z ]+$/;
+            if (!lastnameRegex.test(lastnameInput.value) || lastnameInput.value.length < 1 || lastnameInput.value.length > 15) {
+                lastnameInput.classList.add("error");
+                lastnameError.innerHTML = "Please enter a valid last name (only alphabets and spaces allowed and should be between 1 and 15 characters)";
+                valid = false;
+            } else {
+                lastnameInput.classList.remove("error");
+                lastnameError.innerHTML = "";
+            }
+
+            // Email validation
+            let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput.classList.add("error");
+                emailError.innerHTML = "Please enter a valid email address";
+                valid = false;
+            } else {
+                emailInput.classList.remove("error");
+                emailError.innerHTML = "";
+            }
+
+            // Username validation
+            let usernameRegex = /^(?=.*[a-zA-Z ])(?=.*[0-9])\S{6,}$/;
+            if (!usernameRegex.test(usernameInput.value)) {
+                usernameInput.classList.add("error");
+                usernameError.innerHTML = "Please enter a valid username (should contain both alphabets and numerics and be at least 6 characters long)";
+                valid = false;
+            } else {
+                usernameInput.classList.remove("error");
+                usernameError.innerHTML = "";
+            }
+            //password velidation 
+            let passwordRegex = /^(?=.*[a-z]{2,5})(?=.*[A-Z])(?=.*[0-9]{2,4})(?=.*[!@#$%^&*()\-_=+{};:,<.>]{1,2})\S{9,}$/;
+            if (!passwordRegex.test(passwordInput.value)) {
+                passwordInput.classList.add("error");
+                passwordError.innerHTML = "Please creat a valid password";
+                valid = false;
+            } else {
+                passwordInput.classList.remove("error");
+                passwordError.innerHTML = "";
+            }
+
+            return valid;
+        }
+
+        document.querySelector("form").addEventListener("submit", function (event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+
+        // show password button 
+        const showPasswordBtn = document.getElementById('show-password-btn');
+
+        showPasswordBtn.addEventListener('click', function () {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                showPasswordBtn.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                showPasswordBtn.textContent = 'Show';
+            }
+            return false; // Prevent the form from submitting
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

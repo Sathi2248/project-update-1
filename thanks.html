@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thank you for registering!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  h1 {
+    font-size: 3em;
+    color: #1c7d8e;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .home-button {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+
+    color: #1c7d8e;
+  }
+
+  .home-button:hover {
+    color: black;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h1>Thank you for registering!</h1>
+    <p>Your registration has been received.</p>
+    <p>We will send you an email confirmation shortly.</p>
+    <p>click bellow button for back to home </p>
+    <a href="dummywelcome2.html" class="home-button">click me</a>
+  </div>
+  <script src="script.js">// Optional: add a delay before redirecting to another page
+    setTimeout(function () {
+      window.location.href = "dummywelcome2.html";
+    }, 5000); // 5000 milliseconds = 5 seconds
+  </script>
+</body>
+
+</html>

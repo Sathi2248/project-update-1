@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Our Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ead2d2;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .featured {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+
+
+        .card img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .card:nth-child() {
+            padding-top: 200px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .login-buttons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            float: right;
+            margin: 20px
+        }
+
+        .btn {
+            background-color: #fff;
+            border: 2px solid #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #333;
+            font-weight: bold;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Companies</a></li>
+                <li><a href="#">Games</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Shopping</a></li>
+                <li><a href="#">Camping Places</a></li>
+                <li><a href="#">Trekking</a></li>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Stays</a></li>
+                <li><a href="#">Cafes</a></li>
+            </ul>
+
+
+
+        </nav>
+    </header>
+    <div class="login-buttons">
+        <button class="btn" id="register"> Register</button>
+        <button class="btn" id="login">Log In</button>
+    </div>
+    <main>
+        <section class="welcome">
+            <h1>Welcome to Our Site</h1>
+            <p>Experience the world with us! Whether you're looking to travel, shop, explore, trek, read interesting
+                articles, or learn about new concepts, we've got you covered.</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
+        <section class="featured">
+            <h2>Featured Content</h2>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2131816/pexels-photo-2131816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 1">
+                <h3>Explore the Wild</h3>
+                <p>Discover the beauty of nature with our top-rated hiking and camping trips.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3951790/pexels-photo-3951790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 2">
+                <h3>Shop 'til You Drop</h3>
+                <p>Find the best deals on clothing, accessories, and souvenirs from around the world.</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 3">
+                <h3>Read and Learn</h3>
+                <p>Explore fascinating articles on travel, culture, and lifestyle topics.</p>
+                <a href="#" class="btn">Read More</a>
+
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/672630/pexels-photo-672630.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Image 3">
+                <h3>Read and Learn</h3>
+                <p>Explore fascinating articles on travel, culture, and lifestyle topics.</p>
+                <a href="#" class="btn">Read More</a>
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 OurSite.com. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const registerButton = document.getElementById("register");
+        const loginButton = document.getElementById("login");
+
+        registerButton.addEventListener("click", function () {
+            window.location.href = "register.html";
+        });
+
+        loginButton.addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+
+</html>
